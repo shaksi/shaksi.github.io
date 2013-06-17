@@ -23,7 +23,7 @@ function getUrlVars() {
       , myHash =  'RedBull'
       , insta_next_url;  
 
-    if (window.location.pathname.length>0) {
+    if (window.location.pathname.length>1) {
          var pathArray = window.location.pathname.split( '/' );  
     
          var myPath = pathArray[2].split(":");
