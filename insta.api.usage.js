@@ -48,7 +48,7 @@ function getUrlVars() {
     insta_container.instagram({
         hash: myHash
       , clientId : '3099c5030c0d45da809db1f8f4c83e6b'
-      , showNo : vertical_images*horizontal_images
+      , show : vertical_images*horizontal_images
       , image_type:'low_resolution'
       , image_size: image_size
       , onComplete : function (photos, data) {
@@ -65,7 +65,7 @@ function getUrlVars() {
         button.text('Loading…')
         insta_container.instagram({
             next_url : insta_next_url
-          , showNo: vertical_images*horizontal_images
+          , show: vertical_images*horizontal_images
           , image_type:'low_resolution'
           , image_size: image_size
           , onComplete : function(photos, data) {
