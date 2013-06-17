@@ -22,19 +22,22 @@ function getUrlVars() {
       , image_size = 100
       , myHash =  'RedBull'
       , insta_next_url;  
-      
-     var pathArray = window.location.pathname.split( '/' );  
-     var myPath = pathArray[2].split(":");
-     
-      if(typeof myPath[1] == 'string') myHash = myPath[1];  
-  
-      var s = getUrlVars()["s"];
-      var w = getUrlVars()["w"];
-      var h = getUrlVars()["h"];
 
-     if (isNumber(s)) image_size = s  ;
-     if (isNumber(w)) horizontal_images = w  ;
-     if (isNumber(h)) vertical_images = h  ;
+    if (window.location.pathname.length>0) {
+         var pathArray = window.location.pathname.split( '/' );  
+    
+         var myPath = pathArray[2].split(":");
+     
+          if(typeof myPath[1] == 'string') myHash = myPath[1];  
+  
+          var s = getUrlVars()["s"];
+          var w = getUrlVars()["w"];
+          var h = getUrlVars()["h"];
+
+         if (isNumber(s)) image_size = s  ;
+         if (isNumber(w)) horizontal_images = w  ;
+         if (isNumber(h)) vertical_images = h  ;
+     }
     //style the div based on the number of images and image_size
     $(".main").css({
         "height": style_size(image_size, vertical_images),
